@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ImageCell : UICollectionViewCell
 @property (nonatomic ,strong)UIImageView *cellImageView;
+@property (nonatomic ,strong)UILabel *uLabel;
 - (void)setCImage:(NSString *)imageName;
 @end
 

@@ -9,9 +9,12 @@
 
 #import "PuzzleViewController.h"
 #import "SuccessView.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
+#import "Utils.h"
 #define verificationTolerance  20.0
-#define SC_WIDTH    [[UIScreen mainScreen] bounds].size.width
-#define SC_HEIGHT   [[UIScreen mainScreen] bounds].size.height
+
+#define SC_WIDTH   MIN([[UIScreen mainScreen] bounds].size.width , [[UIScreen mainScreen] bounds].size.height)
+#define SC_HEIGHT   MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width)
 
 typedef NS_ENUM(NSUInteger, SCPieceType) {
     SCPieceTypeInside = -1, // 凹
@@ -26,7 +29,7 @@ typedef NS_ENUM(NSUInteger, SCPieceSideType) {
     SCPieceSideTypeLeft,// 左
 };
 
-@interface PuzzleViewController ()
+@interface PuzzleViewController () <GADFullScreenContentDelegate>
 //方块凸凹数组
 @property (nonatomic, strong) NSMutableArray *SCPieceTypeArray;
 //洞高
@@ -57,6 +60,9 @@ typedef NS_ENUM(NSUInteger, SCPieceSideType) {
 @property (weak, nonatomic) IBOutlet UIButton *cancel_btn;
 
 @property (nonatomic ,strong) SuccessView *successView;
+@property (nonatomic, strong) GADBannerView *bannerView1;
+@property(nonatomic, strong) GADInterstitialAd *interstitial;
+
 @end
 
 @implementation PuzzleViewController
@@ -64,7 +70,15 @@ typedef NS_ENUM(NSUInteger, SCPieceSideType) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:253.0/255.0 green:242.0/255.0 blue:236.0/255.0 alpha:1.0];     //背景颜色-米黄
+    [self setup];
+    
+    [self loadInterstitial];
+    
+}
 
+- (void)setup
+{
+   
     // Do any additional setup after loading the view, typically from a nib.
     [self initData];
 
@@ -84,13 +98,41 @@ typedef NS_ENUM(NSUInteger, SCPieceSideType) {
     [self.view bringSubviewToFront:self.cancel_btn];
     
 }
-- (void)viewDidAppear:(BOOL)animated{
-   
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.successView showWithView:self.view];
 
-    });
+
+- (void)loadInterstitial {
+    self.interstitial = nil;
+    
+  GADRequest *request = [GADRequest request];
+  [GADInterstitialAd
+       loadWithAdUnitID:@"ca-app-pub-7962668156781439/3451282540"
+                request:request
+      completionHandler:^(GADInterstitialAd *ad, NSError *error) {
+        if (error) {
+          NSLog(@"Failed to load interstitial ad with error: %@", [error localizedDescription]);
+          return;
+        }
+        self.interstitial = ad;
+        self.interstitial.fullScreenContentDelegate = self;
+      }];
 }
+
+
+- (GADBannerView *)bannerView1
+{
+    if (_bannerView1==nil) {
+        _bannerView1 = [[GADBannerView alloc]initWithFrame:CGRectMake(0,60 , self.view.bounds.size.width, 60)];
+        _bannerView1.adUnitID = @"ca-app-pub-7962668156781439/8100123931";
+        _bannerView1.rootViewController = self;
+
+    }
+    return _bannerView1;
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    
+}
+
 - (void)initData
 {
     self.SCPieceTypeArray = [NSMutableArray array];
@@ -109,27 +151,120 @@ typedef NS_ENUM(NSUInteger, SCPieceSideType) {
     self.deepnessH = - (4 * self.baseNum);
     self.deepnessV = - (4 * self.baseNum);
 }
+
 - (void)initUI
 {
-    self.puzzleBoard = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.originalCatImage.size.width, self.originalCatImage.size.height)];
+    self.puzzleBoard = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MIN(self.originalCatImage.size.width, self.originalCatImage.size.height), MAX(self.originalCatImage.size.width, self.originalCatImage.size.height))];
     //    self.puzzleBoard.backgroundColor = [UIColor redColor];
     UIImageView *bgImage = [[UIImageView alloc] initWithImage:self.originalCatImage];
     [self.puzzleBoard addSubview:bgImage];
     [self.view addSubview:self.puzzleBoard];
     self.puzzleBoard.center = CGPointMake(SC_WIDTH / 2, SC_HEIGHT / 2);
+//    if (SC_HEIGHT > SC_WIDTH) {
+//        self.puzzleBoard.center = CGPointMake(SC_HEIGHT / 2, SC_WIDTH / 2);
+//    }
     bgImage.alpha = 0.3;
     
+}
+
+- (void)resetView
+{
+    [self.successView dismiss];
+    for (UIView *imgview in self.view.subviews) {
+        if ([imgview isKindOfClass:[UIImageView class]]) {
+            
+            [imgview removeFromSuperview];
+        }
+    }
+    self.SCPieceTypeArray = nil;
+    self.deepnessV = 0;
+    self.deepnessH = 0;
+    self.cubeWidthValue = 0;
+    self.cubeHeightValue = 0;
+    self.pieceCoordinateRectArray = nil;
+    self.pieceRotationArray = nil;
+    self.pieceBezierPathsMutArray = nil;
+    self.firstX = 0;
+    self.firstY = 0;
+    [self.puzzleBoard removeFromSuperview];
+    self.puzzleBoard = nil;
+    self.allPiecesArray = nil;
+    self.baseNum  = 0;
 }
 
 - (SuccessView *)successView
 {
     if (_successView == nil) {
-        _successView = [[SuccessView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+        if ([Utils getIsIpad]) {
+            _successView = [[SuccessView alloc]initWithFrame:CGRectMake(0, 0, 400, 500)];
+
+        } else {
+            _successView = [[SuccessView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+
+        }
 //        _successView.backgroundColor = [UIColor colorWithRed:253.0/255.0 green:242.0/255.0 blue:236.0/255.0 alpha:1.0];
+        _successView.rootVc = self;
+        [_successView.homeButton addTarget:self action:@selector(homeButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [_successView.nextButton addTarget:self action:@selector(nextButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [_successView.gradButton addTarget:self action:@selector(gradButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _successView;
 }
 
+- (void)homeButtonAction:(UIButton *)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)nextButtonAction:(UIButton *)sender
+{
+    self.index += 1;
+    if (self.index < self.imageArray.count) {
+        UIImage *image = [UIImage imageNamed:[self.imageArray objectAtIndex:self.index]];
+        [self startPuzzle:image];
+    }
+}
+
+- (void)gradButtonAction:(UIButton *)sender
+{
+    [self startPuzzle:self.originalCatImage];
+}
+
+- (void)resetImage:(UIImage *)image num:(NSInteger)num
+{
+    if (self.interstitial) {
+        [self.interstitial presentFromRootViewController:self];
+    }
+    
+    [self resetView];
+    self.originalCatImage = image;
+    self.pieceHCount = num;
+    self.pieceVCount = num;
+    [self setup];
+}
+
+- (void)startPuzzle:(UIImage *)image
+{
+    UIAlertController * alerVC = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction * action1 = [UIAlertAction actionWithTitle:NSLocalizedString(@"简单", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self resetImage:image num:3];
+    }];
+    UIAlertAction * action2 = [UIAlertAction actionWithTitle:NSLocalizedString(@"正常", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self resetImage:image num:6];
+
+    }];
+    UIAlertAction * action3 = [UIAlertAction actionWithTitle:NSLocalizedString(@"困难", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self resetImage:image num:10];
+    }];
+    
+    [alerVC addAction:action1];
+    [alerVC addAction:action2];
+    [alerVC addAction:action3];
+    alerVC.popoverPresentationController.sourceView = self.view;
+    alerVC.popoverPresentationController.sourceRect = CGRectMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2, 0, 0);
+    [self presentViewController:alerVC animated:YES completion:nil];
+}
 
 /** 设置Piece切片的类型，坐标，以及方向 */
 - (void)setUpPeaceCoordinatesTypesAndRotationValuesArrays
@@ -404,8 +539,8 @@ typedef NS_ENUM(NSUInteger, SCPieceSideType) {
 
 - (void)shufflePieces
 {
-    CGFloat RangeY = (SC_HEIGHT - self.originalCatImage.size.height) / 2;
-    CGFloat RangeX = self.puzzleBoard.frame.size.width;
+    CGFloat RangeY = (SC_HEIGHT - MAX(self.originalCatImage.size.height, self.originalCatImage.size.width)) / 2;
+    CGFloat RangeX = MIN(self.originalCatImage.size.height, self.originalCatImage.size.width);
     
     for (NSInteger i = 0; i < self.allPiecesArray.count / 2; i++) {
         UIImageView *piece = self.allPiecesArray[i];
@@ -421,6 +556,7 @@ typedef NS_ENUM(NSUInteger, SCPieceSideType) {
 }
 #pragma mark == 手势
 - (void)move:(UIPanGestureRecognizer *)sender {
+    [sender.view.superview bringSubviewToFront:sender.view];
     //手势跟随
     CGPoint translatedPoint = [(UIPanGestureRecognizer*)sender translationInView:self.view];
     if (sender.state == UIGestureRecognizerStateBegan) {
@@ -438,12 +574,13 @@ typedef NS_ENUM(NSUInteger, SCPieceSideType) {
         CGPoint oimageCenter = CGPointMake(oImageFrame.origin.x +oImageFrame.size.width/2, oImageFrame.origin.y + oImageFrame.size.height/2);
         if (fabs(oimageCenter.x - mImgView.center.x) <= verificationTolerance &&
             fabs(oimageCenter.y - mImgView.center.y) <= verificationTolerance) {
-            NSLog(@"位置匹配，可以修正");
-            NSLog(@"可移动数量%lu",(unsigned long)self.allPiecesArray.count);
             
             [mImgView setCenter:oimageCenter];
             mImgView.userInteractionEnabled = NO;
             [self.allPiecesArray removeObject:sender.view];
+            NSLog(@"位置匹配，可以修正");
+            NSLog(@"可移动数量%lu",(unsigned long)self.allPiecesArray.count);
+            [self check];
         }else{
             NSLog(@"位置不匹配，%@--- %@",NSStringFromCGPoint(oimageCenter),NSStringFromCGPoint(translatedPoint));
         }
@@ -453,7 +590,7 @@ typedef NS_ENUM(NSUInteger, SCPieceSideType) {
 - (void)check
 {
     if (self.allPiecesArray.count <= 0) {
-        
+        [self.successView showWithView:self.view];
     }
 }
 
@@ -495,6 +632,18 @@ typedef NS_ENUM(NSUInteger, SCPieceSideType) {
 - (IBAction)dismissVC:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)adDidDismissFullScreenContent:(id<GADFullScreenPresentingAd>)ad {
+    
+}
+
+- (void)adWillDismissFullScreenContent:(id<GADFullScreenPresentingAd>)ad {
+    [self loadInterstitial];
+}
+
+- (void)ad:(id<GADFullScreenPresentingAd>)ad didFailToPresentFullScreenContentWithError:(NSError *)error {
+    [self loadInterstitial];
 }
 
 @end

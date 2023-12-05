@@ -16,5 +16,249 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "A5F94578-4FC9-4520-8828-00F380E5B521"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "528D8CC4-AA33-413B-BEE4-D7794FA6A4B4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = ""
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55A115AB-AD92-489A-B7DE-48D80726767A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SuyChenPuzzleDemo/AppDelegate.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "-adDidDismissFullScreenContent:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "55A115AB-AD92-489A-B7DE-48D80726767A - f9484d828bc098e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate adDidDismissFullScreenContent:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "55A115AB-AD92-489A-B7DE-48D80726767A - f9484d828bc098e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate adDidDismissFullScreenContent:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "55A115AB-AD92-489A-B7DE-48D80726767A - f9484d828bc098e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate adDidDismissFullScreenContent:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02280FD5-F798-4B52-ABA1-B3C69C4BEBDC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SuyChenPuzzleDemo/AppDelegate.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "-ad:didFailToPresentFullScreenContentWithError:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "02280FD5-F798-4B52-ABA1-B3C69C4BEBDC - 66be7a49a5677104"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate ad:didFailToPresentFullScreenContentWithError:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "02280FD5-F798-4B52-ABA1-B3C69C4BEBDC - 66be7a49a5677125"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate ad:didFailToPresentFullScreenContentWithError:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "02280FD5-F798-4B52-ABA1-B3C69C4BEBDC - a8ce03db29cea3ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate adWillPresentFullScreenContent:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "02280FD5-F798-4B52-ABA1-B3C69C4BEBDC - 66be7a49a5677125"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate ad:didFailToPresentFullScreenContentWithError:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7CC2392D-5512-460C-A9F3-7431B4553F45"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SuyChenPuzzleDemo/AppDelegate.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "-adWillPresentFullScreenContent:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7CC2392D-5512-460C-A9F3-7431B4553F45 - a8ce03db29cea426"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate adWillPresentFullScreenContent:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "7CC2392D-5512-460C-A9F3-7431B4553F45 - a8ce03db29cea426"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate adWillPresentFullScreenContent:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "7CC2392D-5512-460C-A9F3-7431B4553F45 - f9484d828bc099bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate adDidDismissFullScreenContent:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "7CC2392D-5512-460C-A9F3-7431B4553F45 - a8ce03db29cea426"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppDelegate adWillPresentFullScreenContent:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/AppDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

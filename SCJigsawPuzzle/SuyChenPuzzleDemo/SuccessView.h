@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface SuccessView : UIView
+@property (nonatomic ,strong)UIViewController *rootVc;
+@property (nonatomic, strong) UIButton *gradButton;
+@property (strong,nonatomic) UIButton *homeButton;
+@property (strong,nonatomic) UIButton *nextButton;
 
 // 弹出自定义视图的方法
 - (void)showWithView:(UIView *)view;

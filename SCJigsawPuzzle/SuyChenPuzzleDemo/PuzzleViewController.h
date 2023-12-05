@@ -17,6 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger pieceVCount;
 //水平数量
 @property (nonatomic, assign) NSInteger pieceHCount;
+
+@property (nonatomic, strong) NSMutableArray *imageArray;
+
+@property (nonatomic, assign) NSInteger index;
+
 @end
 
 NS_ASSUME_NONNULL_END

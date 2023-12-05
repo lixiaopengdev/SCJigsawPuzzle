@@ -12,7 +12,10 @@
 #import <UIKit/UIKit.h>
 #import "admob/AppOpenAdManager.h"
 #import "admob/GoogleMobileAdsConsentManager.h"
-@interface AppDelegate () <AppOpenAdManagerDelegate>
+#import "Utils.h"
+
+@interface AppDelegate () <AppOpenAdManagerDelegate, GADFullScreenContentDelegate>
+@property(strong, nonatomic) GADAppOpenAd* appOpenAd;
 
 @end
 
@@ -25,7 +28,7 @@
     HomeViewController *mMainViewController = [HomeViewController new];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:mMainViewController];
     [self.window setRootViewController:nav];
-    [self startAD:nav];
+//    [self startGoogleMobileAdsSDK];
 
     return YES;
 }
@@ -82,6 +85,9 @@
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
+//    self.appOpenAd = nil;
+//    [self requestAppOpenAd];
+
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
@@ -99,16 +105,47 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.isKeyWindow == YES"];
-    UIWindow *keyWindow = [[application.windows filteredArrayUsingPredicate:predicate] firstObject];
-    UIViewController *rootViewController = keyWindow.rootViewController;
-    // Do not show app open ad if the current view controller is SplashViewController.
-    if (!rootViewController) {
-      return;
-    }
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [AppOpenAdManager.sharedInstance showAdIfAvailable:rootViewController];
-    });
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.isKeyWindow == YES"];
+//    UIWindow *keyWindow = [[application.windows filteredArrayUsingPredicate:predicate] firstObject];
+//    UIViewController *rootViewController = keyWindow.rootViewController;
+//    // Do not show app open ad if the current view controller is SplashViewController.
+//    if (!rootViewController) {
+//      return;
+//    }
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [AppOpenAdManager.sharedInstance showAdIfAvailable:rootViewController];
+//    });
+    
+    [self tryToPresentAd];
+    [Utils getAdvertisingIdentifier];
+
+}
+
+- (void)tryToPresentAd {
+    
+  if (self.appOpenAd) {
+    UIViewController *rootController = self.window.rootViewController;
+    [self.appOpenAd presentFromRootViewController:rootController];
+
+  } else {
+    // If you don't have an ad ready, request one.
+    [self requestAppOpenAd];
+  }
+}
+
+- (void)requestAppOpenAd {
+  self.appOpenAd = nil;
+  [GADAppOpenAd loadWithAdUnitID:@"ca-app-pub-7962668156781439/8443792766"
+                         request:[GADRequest request]
+                     orientation:UIInterfaceOrientationPortrait
+               completionHandler:^(GADAppOpenAd *_Nullable appOpenAd, NSError *_Nullable error) {
+                 if (error) {
+                   NSLog(@"Failed to load app open ad: %@", error);
+                   return;
+                 }
+                 self.appOpenAd = appOpenAd;
+                self.appOpenAd.fullScreenContentDelegate = self;
+               }];
 }
 
 
@@ -116,5 +153,25 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+
+/// Tells the delegate that the ad failed to present full screen content.
+- (void)ad:(nonnull id<GADFullScreenPresentingAd>)ad
+    didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
+  NSLog(@"didFailToPresentFullScreenContentWithError");
+  [self requestAppOpenAd];
+
+}
+
+/// Tells the delegate that the ad will present full screen content.
+- (void)adWillPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
+  NSLog(@"adWillPresentFullScreenContent");
+}
+
+/// Tells the delegate that the ad dismissed full screen content.
+- (void)adDidDismissFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
+  NSLog(@"adDidDismissFullScreenContent");
+  [self requestAppOpenAd];
+}
 
 @end
