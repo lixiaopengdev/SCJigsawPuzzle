@@ -16,6 +16,7 @@
 
 @interface AppDelegate () <AppOpenAdManagerDelegate, GADFullScreenContentDelegate>
 @property(strong, nonatomic) GADAppOpenAd* appOpenAd;
+@property (nonatomic ,assign) BOOL isRemove;
 
 @end
 
@@ -116,8 +117,11 @@
 //        [AppOpenAdManager.sharedInstance showAdIfAvailable:rootViewController];
 //    });
     
-    [self tryToPresentAd];
-    [Utils getAdvertisingIdentifier];
+    self.isRemove = [[NSUserDefaults standardUserDefaults] objectForKey:@"remove_ads"];
+    if (!self.isRemove) {
+        [self tryToPresentAd];
+        [Utils getAdvertisingIdentifier];
+    }
 
 }
 

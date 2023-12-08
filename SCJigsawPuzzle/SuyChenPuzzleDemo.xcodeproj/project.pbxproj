@@ -12,6 +12,8 @@
 		0A98F37C2AD64E9400FF865E /* SuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A98F37A2AD64E9400FF865E /* SuccessView.m */; };
 		0ABD312F2B1F229300C26069 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ABD312D2B1F228E00C26069 /* Localizable.strings */; };
 		0ABD313B2B1F57B500C26069 /* IAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD313A2B1F57B500C26069 /* IAPManager.m */; };
+		0ABD313D2B20A2E300C26069 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABD313C2B20A2E300C26069 /* StoreKit.framework */; };
+		0ABD31402B21AFDB00C26069 /* PurchaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD313E2B21AFDB00C26069 /* PurchaseView.m */; };
 		0AF8FA362B14899600260BAA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8FA352B14899600260BAA /* Utils.m */; };
 		0AFB4A2E2AD3A1770056B3D5 /* CYLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB4A2D2AD3A1770056B3D5 /* CYLineLayout.m */; };
 		2029C0C5221D403700937B5E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C0C3221D403700937B5E /* HomeViewController.m */; };
@@ -39,6 +41,9 @@
 		0ABD31372B1F4D0900C26069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ABD31392B1F57B500C26069 /* IAPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPManager.h; sourceTree = "<group>"; };
 		0ABD313A2B1F57B500C26069 /* IAPManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAPManager.m; sourceTree = "<group>"; };
+		0ABD313C2B20A2E300C26069 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0ABD313E2B21AFDB00C26069 /* PurchaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseView.m; sourceTree = "<group>"; };
+		0ABD313F2B21AFDB00C26069 /* PurchaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseView.h; sourceTree = "<group>"; };
 		0AF8FA342B14899600260BAA /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		0AF8FA352B14899600260BAA /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		0AFB4A2C2AD3A1760056B3D5 /* CYLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLineLayout.h; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D62A463BBA558AC175935B50 /* Pods_SuyChenPuzzleDemo.framework in Frameworks */,
+				0ABD313D2B20A2E300C26069 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +126,8 @@
 				2029C0C3221D403700937B5E /* HomeViewController.m */,
 				20CEDFA9221D4F7A005C0799 /* PuzzleViewController.h */,
 				20CEDFAA221D4F7A005C0799 /* PuzzleViewController.m */,
+				0ABD313F2B21AFDB00C26069 /* PurchaseView.h */,
+				0ABD313E2B21AFDB00C26069 /* PurchaseView.m */,
 				0A98F37B2AD64E9400FF865E /* SuccessView.h */,
 				0A98F37A2AD64E9400FF865E /* SuccessView.m */,
 				0AF8FA342B14899600260BAA /* Utils.h */,
@@ -166,6 +174,7 @@
 		C9325218569576592485AFC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0ABD313C2B20A2E300C26069 /* StoreKit.framework */,
 				5FFFC084D07BB0E021A57371 /* Pods_SuyChenPuzzleDemo.framework */,
 			);
 			name = Frameworks;
@@ -288,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABD31402B21AFDB00C26069 /* PurchaseView.m in Sources */,
 				0AF8FA362B14899600260BAA /* Utils.m in Sources */,
 				0A98F3792AD52ABC00FF865E /* GoogleMobileAdsConsentManager.m in Sources */,
 				0A98F3782AD52ABC00FF865E /* AppOpenAdManager.m in Sources */,
@@ -455,14 +465,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JU8QP4D38R;
+				DEVELOPMENT_TEAM = 49RZ6HZFGX;
 				INFOPLIST_FILE = SuyChenPuzzleDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.puzzle.lua;
+				PRODUCT_BUNDLE_IDENTIFIER = com.li.freepuzzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -474,14 +484,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3F9ZPHPN49;
+				DEVELOPMENT_TEAM = 49RZ6HZFGX;
 				INFOPLIST_FILE = SuyChenPuzzleDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.suychen.SuyChenPuzzleDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.li.freepuzzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

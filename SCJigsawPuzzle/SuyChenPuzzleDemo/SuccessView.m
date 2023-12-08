@@ -16,6 +16,7 @@
 @property (nonatomic, strong) GADBannerView *bannerView1;
 @property (nonatomic,strong) GADBannerView *bannerView2;
 @property (nonatomic,strong) GADBannerView *bannerView3;
+@property (nonatomic ,assign) BOOL isRemove;
 
 @end
 
@@ -25,6 +26,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.isRemove = [[NSUserDefaults standardUserDefaults] objectForKey:@"remove_ads"];
+
         self.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.5];
         [self createUI];
     }
@@ -167,9 +170,12 @@
                          self.backView.transform = CGAffineTransformIdentity; // 恢复正常大小
                      }
                      completion:^(BOOL finished) {
-        [self addSubview:self.bannerView1];
-        [self addSubview:self.bannerView2];
-        [self addSubview:self.bannerView3];
+        if (!self.isRemove) {
+            [self addSubview:self.bannerView1];
+            [self addSubview:self.bannerView2];
+            [self addSubview:self.bannerView3];
+
+        }
         self.bannerView1.frame = CGRectMake(0,self.backView.frame.origin.y - 60 , self.bounds.size.width, 60);
         self.bannerView2.frame = CGRectMake(0, self.backView.frame.origin.y + self.backView.bounds.size.height, self.bounds.size.width, 60);
         self.bannerView3.frame = CGRectMake(0, self.bannerView2.frame.origin.y + 60, UIScreen.mainScreen.bounds.size.width, 60);

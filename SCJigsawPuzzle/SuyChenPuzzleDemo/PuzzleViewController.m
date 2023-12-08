@@ -62,6 +62,7 @@ typedef NS_ENUM(NSUInteger, SCPieceSideType) {
 @property (nonatomic ,strong) SuccessView *successView;
 @property (nonatomic, strong) GADBannerView *bannerView1;
 @property(nonatomic, strong) GADInterstitialAd *interstitial;
+@property (nonatomic ,assign) BOOL isRemove;
 
 @end
 
@@ -69,10 +70,15 @@ typedef NS_ENUM(NSUInteger, SCPieceSideType) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.isRemove = [[NSUserDefaults standardUserDefaults] objectForKey:@"remove_ads"];
+
     self.view.backgroundColor = [UIColor colorWithRed:253.0/255.0 green:242.0/255.0 blue:236.0/255.0 alpha:1.0];     //背景颜色-米黄
     [self setup];
     
-    [self loadInterstitial];
+    if (!self.isRemove) {
+        [self loadInterstitial];
+
+    }
     
 }
 

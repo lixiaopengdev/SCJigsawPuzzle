@@ -14,6 +14,9 @@
 #import <FFToast/FFToast.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
 #import "Utils.h"
+#import "IAPManager.h"
+#import <StoreKit/StoreKit.h>
+#import "PurchaseView.h"
 #define kJLXWidthScale              0.8       //以6/6s为准宽度缩小系数
 #define kJLXHeightScale             0.8//高度缩小系数
 #define kJLXBackgroundColor         [UIColor colorWithRed:253.0/255.0 green:242.0/255.0 blue:236.0/255.0 alpha:1.0]     //背景颜色-米黄
@@ -35,13 +38,17 @@
 @property (nonatomic, strong) GADBannerView *bannerView1;
 @property (nonatomic,strong) GADBannerView *bannerView2;
 @property(nonatomic, strong) GADInterstitialAd *interstitial;
-
+@property (nonatomic ,strong) PurchaseView *purchaseView;
+@property (nonatomic ,assign) BOOL isRemove;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+     self.isRemove = [[NSUserDefaults standardUserDefaults] objectForKey:@"remove_ads"];
+
     UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 90, 29.12)];
     imageview.image = [UIImage imageNamed:@"imgpuzzle" ];
     self.navigationItem.titleView = imageview;
@@ -51,13 +58,66 @@
     [self.view addSubview:self.addPhotoBtn];
     [self createUI];
     [self loadData];
-    [self.view addSubview:self.bannerView1];
-    [self.bannerView1 loadRequest:[GADRequest request]];
-    
-    [self.view addSubview:self.bannerView2];
-    [self.bannerView2 loadRequest:[GADRequest request]];
-    [self loadInterstitial];
+    if (!self.isRemove) {
+        [self.view addSubview:self.bannerView1];
+        [self.bannerView1 loadRequest:[GADRequest request]];
+        
+        [self.view addSubview:self.bannerView2];
+        [self.bannerView2 loadRequest:[GADRequest request]];
+        [self loadInterstitial];
+    }
+
 }
+
+- (PurchaseView *)purchaseView
+{
+    if (_purchaseView == nil) {
+        if ([Utils getIsIpad]) {
+            _purchaseView = [[PurchaseView alloc]initWithFrame:CGRectMake(0, 0, 400, 400)];
+
+        } else {
+            _purchaseView = [[PurchaseView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+
+        }
+//        _successView.backgroundColor = [UIColor colorWithRed:253.0/255.0 green:242.0/255.0 blue:236.0/255.0 alpha:1.0];
+        _purchaseView.rootVc = self;
+        [_purchaseView.homeButton addTarget:self action:@selector(oneAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [_purchaseView.gradButton addTarget:self action:@selector(nextAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _purchaseView;
+}
+
+
+- (void)oneAction:(UIButton *)sender
+{
+    
+    if ([IAPManager canMakePayments]) {
+        [[IAPManager sharedInstance]requestProductsId:@"remove_ads_all_puzzle" success:^(NSString * _Nonnull receiptStr) {
+            [[NSUserDefaults standardUserDefaults] setObject:@(1) forKey:@"remove_ads"];
+                } fail:^(NSString * _Nonnull errorMsg) {
+                    [[NSUserDefaults standardUserDefaults] setObject:@(0) forKey:@"remove_ads"];
+
+                }];
+    }
+    
+}
+
+- (void)nextAction:(UIButton *)sender
+{
+    if ([IAPManager canMakePayments]) {
+        
+        [[IAPManager sharedInstance] requestProductsId:@"remove_ads_month_puzzle" success:^(NSString * _Nonnull receiptStr) {
+            [[NSUserDefaults standardUserDefaults] setObject:@(1) forKey:@"remove_ads"];
+
+                } fail:^(NSString * _Nonnull errorMsg) {
+                    [[NSUserDefaults standardUserDefaults] setObject:@(0) forKey:@"remove_ads"];
+
+                }];
+    }
+    
+}
+
 
 - (void)loadInterstitial {
     self.interstitial = nil;
@@ -178,17 +238,16 @@
 }
 
 -(void)loadData{
-    NSArray *array = [NSArray arrayWithObjects:@"puzzle",@"puzzle",@"puzzle",@"puzzle", nil];
 
     self.imageArray = [NSMutableArray array];
     ///加四次为了循环
-    for (int i=0; i<4; i++) {
-        [self.imageArray addObjectsFromArray:array];
+    for (int i=1; i<=71; i++) {
+        [self.imageArray addObject:[NSString stringWithFormat:@"S%d",i]];
     }
     [self.collectionView reloadData];
     [self.collectionView layoutIfNeeded];
-    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.imageArray.count/2 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
-    self.m_currentIndex = self.imageArray.count/2;
+    /*[self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.imageArray.count/2 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO]*/;
+//    self.m_currentIndex = self.imageArray.count/2;
 }
 //配置cell居中
 - (void)fixCellToCenter {
@@ -207,11 +266,10 @@
     [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:self.m_currentIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
 }
 
-
-
-
 - (void)setAction
 {
+    
+    [self.purchaseView showWithView:self.view];
     
 }
 
@@ -230,6 +288,10 @@
     [alerVC addAction:action1];
     [alerVC addAction:action2];
     [alerVC addAction:action3];
+    alerVC.popoverPresentationController.sourceView = self.view;
+    alerVC.popoverPresentationController.sourceRect = CGRectMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2, 0, 0);
+
+
     [[[[UIApplication sharedApplication]delegate] window].rootViewController presentViewController:alerVC animated:YES completion:nil];
 }
 
@@ -352,16 +414,16 @@
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
-    if (self.m_currentIndex == [self.imageArray count]/4*3) {
-        NSIndexPath *path  = [NSIndexPath indexPathForItem:[self.imageArray count]/2 inSection:0];
-        [self.collectionView scrollToItemAtIndexPath:path atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
-        self.m_currentIndex = [self.imageArray count]/2;
-    }
-    else if(self.m_currentIndex == [self.imageArray count]/4){
-        NSIndexPath *path = [NSIndexPath indexPathForItem:[self.imageArray count]/2 inSection:0];
-        [self.collectionView scrollToItemAtIndexPath:path atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
-        self.m_currentIndex = [self.imageArray count]/2;
-    }
+//    if (self.m_currentIndex == [self.imageArray count]/4*3) {
+//        NSIndexPath *path  = [NSIndexPath indexPathForItem:[self.imageArray count]/2 inSection:0];
+//        [self.collectionView scrollToItemAtIndexPath:path atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+//        self.m_currentIndex = [self.imageArray count]/2;
+//    }
+//    else if(self.m_currentIndex == [self.imageArray count]/4){
+//        NSIndexPath *path = [NSIndexPath indexPathForItem:[self.imageArray count]/2 inSection:0];
+//        [self.collectionView scrollToItemAtIndexPath:path atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+//        self.m_currentIndex = [self.imageArray count]/2;
+//    }
 }
 
 
@@ -437,6 +499,7 @@
         _cellImageView.layer.cornerRadius = 8.f;
         [_cellImageView setCenter:CGPointMake(_cellImageView.center.x, self.frame.size.height/2)
         ];
+        _cellImageView.contentMode = UIViewContentModeScaleAspectFit;
         //        _cellImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 474*kJLXWidthScale, 848*kJLXHeightScale)];
 
     }
