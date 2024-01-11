@@ -3,7 +3,7 @@
 
 #import "IAPManager.h"
 #import <StoreKit/StoreKit.h>
-
+#import <SVProgressHUD/SVProgressHUD.h>
 @interface IAPManager()<SKProductsRequestDelegate, SKRequestDelegate, SKPaymentTransactionObserver>
 @property (nonatomic, copy) NSString *productsId;
 @property (nonatomic, copy) void (^success)(NSString *receiptStr);
@@ -47,6 +47,7 @@ static dispatch_once_t onceToken;
 - (void)requestProductsId:(NSString *)productsId
                   success:(nonnull void (^)(NSString * _Nonnull))success
                      fail:(nonnull void (^)(NSString * _Nonnull))fail {
+    [SVProgressHUD show];
     self.productsId = productsId;
     if (![IAPManager canMakePayments]) {
         if (fail) {fail(@"当前设备暂不支持充值");}
@@ -115,10 +116,12 @@ static dispatch_once_t onceToken;
         switch (transaction.transactionState) {
             case SKPaymentTransactionStatePurchased: { /// 交易成功
                 NSLog(@"【支付结果】======= 交易成功");
+                [SVProgressHUD dismiss];
                 [self transactionSucceed:transaction];
             }
                 break;
             case SKPaymentTransactionStateFailed: { /// 交易失败
+                [SVProgressHUD dismiss];
                 NSLog(@"【支付结果】======= 交易失败");
                 [self transactionFailed:transaction];
             }
@@ -149,6 +152,7 @@ static dispatch_once_t onceToken;
 /// 交易结束-成功
 - (void)transactionSucceed:(SKPaymentTransaction *)transaction {
     /// 这里的URL测试环境下为沙盒url，上线版本中应为苹果后台的URL
+    [SVProgressHUD dismiss];
     NSURL *receiptUrl = [[NSBundle mainBundle] appStoreReceiptURL];
     NSData *receiptData = [NSData dataWithContentsOfURL:receiptUrl];
     /// 转化为base64字符串
@@ -190,6 +194,7 @@ static dispatch_once_t onceToken;
 /// 交易失败
 - (void)transactionFailed:(SKPaymentTransaction *)transaction {
     NSString *errorMsg = [transaction.error localizedDescription];
+    [SVProgressHUD dismiss];
     if (transaction.error.code == SKErrorPaymentCancelled){
         errorMsg = @"您取消了充值操作";
         NSLog(@"您取消了内购操作");

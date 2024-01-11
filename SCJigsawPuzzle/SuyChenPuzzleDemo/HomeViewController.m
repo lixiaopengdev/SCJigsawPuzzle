@@ -11,12 +11,13 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Masonry/Masonry.h>
 #import "CYLineLayout.h"
-#import <FFToast/FFToast.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
 #import "Utils.h"
 #import "IAPManager.h"
 #import <StoreKit/StoreKit.h>
 #import "PurchaseView.h"
+#import "WebViewVC.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 #define kJLXWidthScale              0.8       //以6/6s为准宽度缩小系数
 #define kJLXHeightScale             0.8//高度缩小系数
 #define kJLXBackgroundColor         [UIColor colorWithRed:253.0/255.0 green:242.0/255.0 blue:236.0/255.0 alpha:1.0]     //背景颜色-米黄
@@ -34,7 +35,6 @@
 @property (assign,nonatomic) NSInteger m_currentIndex;
 @property (assign,nonatomic) CGFloat m_dragStartX;
 @property (assign,nonatomic) CGFloat m_dragEndX;
-@property (strong, nonatomic) FFToast *fftoast;
 @property (nonatomic, strong) GADBannerView *bannerView1;
 @property (nonatomic,strong) GADBannerView *bannerView2;
 @property(nonatomic, strong) GADInterstitialAd *interstitial;
@@ -55,6 +55,8 @@
     self.view.backgroundColor = [UIColor colorWithRed:253.0/255.0 green:242.0/255.0 blue:236.0/255.0 alpha:1.0];    //背景颜色-米黄
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"去除广告", nil) style:UIBarButtonItemStyleDone target:self action:@selector(setAction)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"隐私政策", nil) style:UIBarButtonItemStyleDone target:self action:@selector(privacyAction)];
+
     [self.view addSubview:self.addPhotoBtn];
     [self createUI];
     [self loadData];
@@ -88,12 +90,17 @@
     return _purchaseView;
 }
 
+- (void)privacyAction
+{
+    
+    WebViewVC *vc = [[WebViewVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)oneAction:(UIButton *)sender
 {
-    
     if ([IAPManager canMakePayments]) {
-        [[IAPManager sharedInstance]requestProductsId:@"remove_ads_all_puzzle" success:^(NSString * _Nonnull receiptStr) {
+        [[IAPManager sharedInstance]requestProductsId:@"remove_all_puzzle_ads" success:^(NSString * _Nonnull receiptStr) {
             [[NSUserDefaults standardUserDefaults] setObject:@(1) forKey:@"remove_ads"];
                 } fail:^(NSString * _Nonnull errorMsg) {
                     [[NSUserDefaults standardUserDefaults] setObject:@(0) forKey:@"remove_ads"];
@@ -107,7 +114,7 @@
 {
     if ([IAPManager canMakePayments]) {
         
-        [[IAPManager sharedInstance] requestProductsId:@"remove_ads_month_puzzle" success:^(NSString * _Nonnull receiptStr) {
+        [[IAPManager sharedInstance] requestProductsId:@"remove_ads_puzzle_mon" success:^(NSString * _Nonnull receiptStr) {
             [[NSUserDefaults standardUserDefaults] setObject:@(1) forKey:@"remove_ads"];
 
                 } fail:^(NSString * _Nonnull errorMsg) {
@@ -136,15 +143,6 @@
       }];
 }
 
-- (FFToast *)fftoast
-{
-    if (_fftoast == nil) {
-        _fftoast = [[FFToast alloc]initToastWithTitle:@"提示" message:@"左右滑动更精彩" iconImage:[UIImage imageNamed:@"fftoast_info"]];
-        _fftoast.toastPosition = FFToastPositionCentre;
-        _fftoast.toastBackgroundColor = [UIColor colorWithRed:75.f/255.f green:107.f/255.f blue:122.f/255.f alpha:1.f];
-    }
-    return _fftoast;
-}
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -160,6 +158,7 @@
         _bannerView1 = [[GADBannerView alloc]initWithFrame:CGRectMake(0, 0, JLXScreenSize.width, 60)];
         _bannerView1.adUnitID = @"ca-app-pub-7962668156781439/1418578781";
         _bannerView1.rootViewController = self;
+        
     }
     return _bannerView1;
 }

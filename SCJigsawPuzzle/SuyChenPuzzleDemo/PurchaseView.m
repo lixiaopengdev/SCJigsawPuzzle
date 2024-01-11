@@ -34,11 +34,20 @@
 
 - (void)createUI {
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+    [self addGestureRecognizer:tap];
+    
     [self.backView addSubview:self.titleLabel];
     [self.backView addSubview:self.msgLabel];
     [self.backView addSubview:self.homeButton];
     [self.backView addSubview:self.gradButton];
+    [self.backView addSubview:self.nextButton];
 
+}
+
+- (void)tapAction:(UITapGestureRecognizer *)sender
+{
+    [self dismiss];
 }
 
 - (GADBannerView *)bannerView1

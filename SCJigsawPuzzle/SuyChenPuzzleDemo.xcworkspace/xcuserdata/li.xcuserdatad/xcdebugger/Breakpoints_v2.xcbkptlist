@@ -44,22 +44,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "55A115AB-AD92-489A-B7DE-48D80726767A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SuyChenPuzzleDemo/AppDelegate.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "-adDidDismissFullScreenContent:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "EDB8A882-6DC8-48D7-8035-19F229A7B15D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -67,87 +51,10 @@
             filePath = "SuyChenPuzzleDemo/HomeViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "-oneAction:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EDB8A882-6DC8-48D7-8035-19F229A7B15D - 78875f5eea490f16"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__32-[HomeViewController oneAction:]_block_invoke"
-                  moduleName = "SuyChenPuzzleDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "160">
-               </Location>
-               <Location
-                  uuid = "EDB8A882-6DC8-48D7-8035-19F229A7B15D - 9fe0192bafd0a186"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__32-[HomeViewController oneAction:]_block_invoke_2"
-                  moduleName = "SuyChenPuzzleDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "EDB8A882-6DC8-48D7-8035-19F229A7B15D - e86b90d98b8c86a9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[HomeViewController oneAction:]"
-                  moduleName = "SuyChenPuzzleDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  uuid = "EDB8A882-6DC8-48D7-8035-19F229A7B15D - 78875f5eea490f16"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__32-[HomeViewController oneAction:]_block_invoke"
-                  moduleName = "SuyChenPuzzleDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "EDB8A882-6DC8-48D7-8035-19F229A7B15D - 78875f5eea4908f7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__32-[HomeViewController oneAction:]_block_invoke"
-                  moduleName = "SuyChenPuzzleDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "60">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -160,103 +67,9 @@
             filePath = "SuyChenPuzzleDemo/HomeViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "-oneAction:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BD56E8EB-A516-40D2-8338-BCB7BD32DA84 - 9fe0192bafd0a1c0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__32-[HomeViewController oneAction:]_block_invoke_2"
-                  moduleName = "SuyChenPuzzleDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "160">
-               </Location>
-               <Location
-                  uuid = "BD56E8EB-A516-40D2-8338-BCB7BD32DA84 - 78875f5eea490f35"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__32-[HomeViewController oneAction:]_block_invoke"
-                  moduleName = "SuyChenPuzzleDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "160">
-               </Location>
-               <Location
-                  uuid = "BD56E8EB-A516-40D2-8338-BCB7BD32DA84 - 9fe0192bafd0a1e7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__32-[HomeViewController oneAction:]_block_invoke_2"
-                  moduleName = "SuyChenPuzzleDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "BD56E8EB-A516-40D2-8338-BCB7BD32DA84 - 9fe0192bafd0a186"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__32-[HomeViewController oneAction:]_block_invoke_2"
-                  moduleName = "SuyChenPuzzleDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "60">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "067F2BA7-4510-4B09-AF2E-3D3DB96A8C55"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SuyChenPuzzleDemo/IAPManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "-addPayment:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C0032CE1-2935-43B6-AC9A-84B176F4317A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SuyChenPuzzleDemo/IAPManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "-requestDidFinish:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -270,26 +83,42 @@
             filePath = "SuyChenPuzzleDemo/IAPManager.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "-request:didFailWithError:"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "46FF33EF-25A3-4ECD-9426-E47C80F8F93F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SuyChenPuzzleDemo/IAPManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "-paymentQueue:updatedTransactions:"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3B25229C-CC97-47C2-AE81-F0910DDEFC4E - b84ff0d8f48a9426"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager request:didFailWithError:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "3B25229C-CC97-47C2-AE81-F0910DDEFC4E - b84ff0d8f48a9409"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager request:didFailWithError:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -302,26 +131,42 @@
             filePath = "SuyChenPuzzleDemo/IAPManager.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "-transactionSucceed:"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B31DD115-9715-4F6E-AF33-B7FD6394A88F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SuyChenPuzzleDemo/IAPManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
-            landmarkName = "-transactionFailed:"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1EDECA6F-D509-4EBA-8326-BE10B98DDFA8 - 544d9f0996ea63c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager transactionSucceed:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "1EDECA6F-D509-4EBA-8326-BE10B98DDFA8 - 544d9f0996ea63c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager transactionSucceed:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "156"
+                  endingLineNumber = "156"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -334,122 +179,42 @@
             filePath = "SuyChenPuzzleDemo/IAPManager.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "-localReceiptVerifyingWithUrl:AndReceipt:AndTransaction:"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2D68C38E-3266-4DF8-805A-A27CC91A32CC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SuyChenPuzzleDemo/IAPManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "-paymentQueue:updatedTransactions:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B95CFAB8-C2C8-44C1-ABF2-3915CB858296"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SuyChenPuzzleDemo/IAPManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "-paymentQueue:updatedTransactions:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "978D72D3-F7E9-4332-B4E6-1B6C3E8EA7BF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SuyChenPuzzleDemo/IAPManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "-paymentQueue:updatedTransactions:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "ECCE16CC-C475-4574-B902-BFC0A0B9EC10"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SuyChenPuzzleDemo/IAPManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "-paymentQueue:updatedTransactions:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "142A7A7F-119B-44D6-BC91-238EB9293BEC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SuyChenPuzzleDemo/IAPManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "-paymentQueue:updatedTransactions:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "89589322-B70D-4801-AB7B-859AD47E2407"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SuyChenPuzzleDemo/IAPManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "-paymentQueue:updatedTransactions:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EDFBE4BE-1980-4003-BC33-727DE7B27B72"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SuyChenPuzzleDemo/IAPManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "-paymentQueue:updatedTransactions:"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2BD17749-E7F8-4765-ADCB-C1AF123414F8 - 112b0b0030195515"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager localReceiptVerifyingWithUrl:AndReceipt:AndTransaction:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "216"
+                  endingLineNumber = "216"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "2BD17749-E7F8-4765-ADCB-C1AF123414F8 - 112b0b0030195534"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager localReceiptVerifyingWithUrl:AndReceipt:AndTransaction:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -462,85 +227,56 @@
             filePath = "SuyChenPuzzleDemo/HomeViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "-nextAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "21C83300-8A47-4B3F-9C59-8D5AAFF5F345"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SuyChenPuzzleDemo/admob/GoogleMobileAdsConsentManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-gatherConsentFromConsentPresentationViewController:consentGatheringComplete:"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "211DEB96-DB31-4E02-A944-92B80E0CEF7A - 6d4896ae32676398"
+                  uuid = "21C83300-8A47-4B3F-9C59-8D5AAFF5F345 - 2e5f22be0d165ea6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__33-[HomeViewController nextAction:]_block_invoke"
+                  symbolName = "-[GoogleMobileAdsConsentManager gatherConsentFromConsentPresentationViewController:consentGatheringComplete:]"
                   moduleName = "SuyChenPuzzleDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/admob/GoogleMobileAdsConsentManager.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "160">
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "128">
                </Location>
                <Location
-                  uuid = "211DEB96-DB31-4E02-A944-92B80E0CEF7A - 3cc2a01adb0a8614"
+                  uuid = "21C83300-8A47-4B3F-9C59-8D5AAFF5F345 - 2e5f22be0d165ea6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__33-[HomeViewController nextAction:]_block_invoke_2"
+                  symbolName = "-[GoogleMobileAdsConsentManager gatherConsentFromConsentPresentationViewController:consentGatheringComplete:]"
                   moduleName = "SuyChenPuzzleDemo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/admob/GoogleMobileAdsConsentManager.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "114"
-                  endingLineNumber = "114"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "211DEB96-DB31-4E02-A944-92B80E0CEF7A - 4270a73f8eb6656"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[HomeViewController nextAction:]"
-                  moduleName = "SuyChenPuzzleDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  uuid = "211DEB96-DB31-4E02-A944-92B80E0CEF7A - 6d4896ae32676077"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__33-[HomeViewController nextAction:]_block_invoke"
-                  moduleName = "SuyChenPuzzleDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "112"
-                  endingLineNumber = "112"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "211DEB96-DB31-4E02-A944-92B80E0CEF7A - 6d4896ae32676056"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__33-[HomeViewController nextAction:]_block_invoke"
-                  moduleName = "SuyChenPuzzleDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/HomeViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "60">
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "84">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -548,17 +284,337 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "244E9570-0762-4067-8995-92E07969288E"
+            uuid = "E5AFBDC8-44F5-483F-9C81-687FDA14503A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SuyChenPuzzleDemo/IAPManager.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "-productsRequest:didReceiveResponse:"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "-transactionFailed:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E5AFBDC8-44F5-483F-9C81-687FDA14503A - 34f5c98dccf34ce3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager transactionFailed:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "E5AFBDC8-44F5-483F-9C81-687FDA14503A - 34f5c98dccf34ce3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager transactionFailed:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4C3BAF9-809E-4773-8029-220B15A165D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SuyChenPuzzleDemo/IAPManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "-paymentQueue:updatedTransactions:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E4C3BAF9-809E-4773-8029-220B15A165D3 - c6de22d9530afcac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager paymentQueue:updatedTransactions:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "E4C3BAF9-809E-4773-8029-220B15A165D3 - c6de22d9530afcac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager paymentQueue:updatedTransactions:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "240">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD1AEF06-78A4-4096-BB27-EA842298C82A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SuyChenPuzzleDemo/IAPManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "-paymentQueue:updatedTransactions:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BD1AEF06-78A4-4096-BB27-EA842298C82A - c6de22d9530afd62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager paymentQueue:updatedTransactions:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "BD1AEF06-78A4-4096-BB27-EA842298C82A - c6de22d9530afd41"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager paymentQueue:updatedTransactions:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2495D951-8B14-4075-A687-E67AF35F692C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SuyChenPuzzleDemo/IAPManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "-paymentQueue:updatedTransactions:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2495D951-8B14-4075-A687-E67AF35F692C - c6de22d9530afede"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager paymentQueue:updatedTransactions:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  uuid = "2495D951-8B14-4075-A687-E67AF35F692C - c6de22d9530afd41"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager paymentQueue:updatedTransactions:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FB2C11A-644F-4B34-A640-B1E69E8E06D8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SuyChenPuzzleDemo/IAPManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "-paymentQueue:updatedTransactions:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8FB2C11A-644F-4B34-A640-B1E69E8E06D8 - c6de22d9530afe39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager paymentQueue:updatedTransactions:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  uuid = "8FB2C11A-644F-4B34-A640-B1E69E8E06D8 - c6de22d9530afebd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager paymentQueue:updatedTransactions:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "284">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B6BD8CBB-F0F5-44B9-910F-713A49F34278"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SuyChenPuzzleDemo/IAPManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "-paymentQueue:updatedTransactions:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B6BD8CBB-F0F5-44B9-910F-713A49F34278 - c6de22d9530af8ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager paymentQueue:updatedTransactions:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  uuid = "B6BD8CBB-F0F5-44B9-910F-713A49F34278 - c6de22d9530afe18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager paymentQueue:updatedTransactions:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "220">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28F4DC66-E805-4514-9E82-E5A953F69332"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SuyChenPuzzleDemo/IAPManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "-paymentQueue:updatedTransactions:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "28F4DC66-E805-4514-9E82-E5A953F69332 - c6de22d9530af8ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager paymentQueue:updatedTransactions:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  uuid = "28F4DC66-E805-4514-9E82-E5A953F69332 - c6de22d9530af8ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IAPManager paymentQueue:updatedTransactions:]"
+                  moduleName = "SuyChenPuzzleDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/li/unity/SCJigsawPuzzle/SCJigsawPuzzle/SuyChenPuzzleDemo/IAPManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "304">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

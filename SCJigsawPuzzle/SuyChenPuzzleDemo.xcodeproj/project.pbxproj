@@ -14,6 +14,9 @@
 		0ABD313B2B1F57B500C26069 /* IAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD313A2B1F57B500C26069 /* IAPManager.m */; };
 		0ABD313D2B20A2E300C26069 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABD313C2B20A2E300C26069 /* StoreKit.framework */; };
 		0ABD31402B21AFDB00C26069 /* PurchaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD313E2B21AFDB00C26069 /* PurchaseView.m */; };
+		0ABD31422B235B9900C26069 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABD31412B235B9900C26069 /* GoogleUtilities.framework */; };
+		0ABD31452B288C7A00C26069 /* WebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD31442B288C7A00C26069 /* WebViewVC.m */; };
+		0ABD31472B288CCD00C26069 /* child-privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = 0ABD31462B288CCD00C26069 /* child-privacy.html */; };
 		0AF8FA362B14899600260BAA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8FA352B14899600260BAA /* Utils.m */; };
 		0AFB4A2E2AD3A1770056B3D5 /* CYLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB4A2D2AD3A1770056B3D5 /* CYLineLayout.m */; };
 		2029C0C5221D403700937B5E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C0C3221D403700937B5E /* HomeViewController.m */; };
@@ -44,6 +47,10 @@
 		0ABD313C2B20A2E300C26069 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0ABD313E2B21AFDB00C26069 /* PurchaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseView.m; sourceTree = "<group>"; };
 		0ABD313F2B21AFDB00C26069 /* PurchaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseView.h; sourceTree = "<group>"; };
+		0ABD31412B235B9900C26069 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ABD31432B288C7A00C26069 /* WebViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewVC.h; sourceTree = "<group>"; };
+		0ABD31442B288C7A00C26069 /* WebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewVC.m; sourceTree = "<group>"; };
+		0ABD31462B288CCD00C26069 /* child-privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "child-privacy.html"; sourceTree = "<group>"; };
 		0AF8FA342B14899600260BAA /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		0AF8FA352B14899600260BAA /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		0AFB4A2C2AD3A1760056B3D5 /* CYLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLineLayout.h; sourceTree = "<group>"; };
@@ -74,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABD31422B235B9900C26069 /* GoogleUtilities.framework in Frameworks */,
 				D62A463BBA558AC175935B50 /* Pods_SuyChenPuzzleDemo.framework in Frameworks */,
 				0ABD313D2B20A2E300C26069 /* StoreKit.framework in Frameworks */,
 			);
@@ -130,6 +138,9 @@
 				0ABD313E2B21AFDB00C26069 /* PurchaseView.m */,
 				0A98F37B2AD64E9400FF865E /* SuccessView.h */,
 				0A98F37A2AD64E9400FF865E /* SuccessView.m */,
+				0ABD31432B288C7A00C26069 /* WebViewVC.h */,
+				0ABD31442B288C7A00C26069 /* WebViewVC.m */,
+				0ABD31462B288CCD00C26069 /* child-privacy.html */,
 				0AF8FA342B14899600260BAA /* Utils.h */,
 				0AF8FA352B14899600260BAA /* Utils.m */,
 				20CEDFAB221D4F7A005C0799 /* PuzzleViewController.xib */,
@@ -174,6 +185,7 @@
 		C9325218569576592485AFC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0ABD31412B235B9900C26069 /* GoogleUtilities.framework */,
 				0ABD313C2B20A2E300C26069 /* StoreKit.framework */,
 				5FFFC084D07BB0E021A57371 /* Pods_SuyChenPuzzleDemo.framework */,
 			);
@@ -244,6 +256,7 @@
 				20E265C9221695F3006298C4 /* LaunchScreen.storyboard in Resources */,
 				20E265C6221695F3006298C4 /* Assets.xcassets in Resources */,
 				20E265C4221695F1006298C4 /* Main.storyboard in Resources */,
+				0ABD31472B288CCD00C26069 /* child-privacy.html in Resources */,
 				20CEDFAD221D4F7A005C0799 /* PuzzleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +319,7 @@
 				0A98F37C2AD64E9400FF865E /* SuccessView.m in Sources */,
 				0ABD313B2B1F57B500C26069 /* IAPManager.m in Sources */,
 				20E265BE221695F1006298C4 /* AppDelegate.m in Sources */,
+				0ABD31452B288C7A00C26069 /* WebViewVC.m in Sources */,
 				2029C0C5221D403700937B5E /* HomeViewController.m in Sources */,
 				20CEDFAC221D4F7A005C0799 /* PuzzleViewController.m in Sources */,
 			);
@@ -464,14 +478,18 @@
 			baseConfigurationReference = 0F9F2961C0FEC1A11FE65706 /* Pods-SuyChenPuzzleDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 49RZ6HZFGX;
 				INFOPLIST_FILE = SuyChenPuzzleDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FreePuzzle;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.li.freepuzzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -483,14 +501,18 @@
 			baseConfigurationReference = 3692AE5C62E66AE1418788D2 /* Pods-SuyChenPuzzleDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 49RZ6HZFGX;
 				INFOPLIST_FILE = SuyChenPuzzleDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FreePuzzle;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.li.freepuzzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
