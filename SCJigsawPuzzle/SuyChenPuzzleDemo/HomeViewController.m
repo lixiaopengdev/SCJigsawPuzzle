@@ -54,7 +54,7 @@
     self.navigationItem.titleView = imageview;
     self.view.backgroundColor = [UIColor colorWithRed:253.0/255.0 green:242.0/255.0 blue:236.0/255.0 alpha:1.0];    //背景颜色-米黄
 
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"去除广告", nil) style:UIBarButtonItemStyleDone target:self action:@selector(setAction)];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"去除广告", nil) style:UIBarButtonItemStyleDone target:self action:@selector(setAction)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"隐私政策", nil) style:UIBarButtonItemStyleDone target:self action:@selector(privacyAction)];
 
     [self.view addSubview:self.addPhotoBtn];

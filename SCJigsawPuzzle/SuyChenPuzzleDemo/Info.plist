@@ -19,15 +19,15 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.2</string>
 	<key>CFBundleVersion</key>
-	<string>1.2</string>
+	<string>1.3</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-7962668156781439~1883497113</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>We need access to your camera to obtain images to provide better gameplay</string>
+	<string>We need to access your camera to obtain images so that you can customize pictures for gaming, which can bring a better gaming experience</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>We need to access your photo album to obtain images to provide better gameplay</string>
+	<string>We need to access your photo album to obtain images so that you can customize pictures for gaming, which can bring a better gaming experience</string>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>This identifier will be used to recommend personalized ads to you</string>
 	<key>SKAdNetworkItems</key>
